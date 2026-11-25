@@ -1,0 +1,278 @@
+/* CONFIGURAÇÕES GERAIS / RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+.hero-image img, .about-image img, .logo img {
+    max-width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;}
+
+:root {
+    --azul-escuro: #14283c; /* Cor primária do seu logo */
+    --dourado: #c5a46e;     /* Cor dos detalhes/seta do seu logo */
+    --cinza-claro: #f8f9fa;
+    --texto-escuro: #333333;
+    --branco: #ffffff;
+}
+
+body {
+    color: var(--texto-escuro);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO E MENU */
+.header {
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 55px; /* Tamanho ajustável do logo */
+    display: block;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--azul-escuro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--dourado);
+}
+
+.nav .btn-contato {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav .btn-contato:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
+/* SEÇÃO HERO (BOAS-VINDAS) */
+.hero-section {
+    background-color: var(--cinza-claro);
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* BOTÕES */
+.btn-principal {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-principal:hover {
+    transform: translateY(-2px);
+    background-color: #b3925c;
+}
+
+/* SEÇÃO SOBRE A EMPRESA */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* SEÇÃO DE SERVIÇOS */
+.services-section {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 6px;
+    border-left: 4px solid var(--dourado);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--dourado);
+}
+
+
+.contact-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--cinza-claro);
+}
+
+.contact-section h2 {
+    font-size: 2.2rem;
+    color: var(--azul-escuro);
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: var(--branco);
+    text-decoration: none;
+    padding: 15px 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background-color: #20ba5a;
+}
+
+.footer {
+    background-color: #0e1b29;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-container, .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image img, .about-image img {
+        max-width: 90%;
+    }
+}
